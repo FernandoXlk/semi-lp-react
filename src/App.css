@@ -1,0 +1,294 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  animation: deCima 2s linear;
+  z-index: 10; 
+}
+
+@keyframes deCima {
+  0% {
+    transform: translateY(-50px); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0.7;
+  transition: all 200ms;
+}
+
+.navItem:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.navItem img {
+  width: 20px;
+  cursor: pointer;
+}
+
+section {
+  min-height: 100vh;
+  height: auto;
+}
+
+.s1 {
+  background-image: url(./backgroundVerde.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.s1 h1 {
+  font-size: 80px;
+  word-break: break-all;
+  color: #ffff;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 10px #090909; 
+  width: 100%;
+  text-align: center;
+  padding-top: 3vh;
+  animation: esquerda 2s ease-in-out;
+}
+
+.s1 p {
+  color: aqua;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  animation: esquerda 2s ease-in-out;
+}
+
+.s1 h2 {
+  color: white;
+  font-size: 32px;
+  text-shadow: 0px 3px 18px #000;
+  width: 100%; 
+  text-align: center;
+  animation: esquerda 2s ease-in-out; 
+}
+
+
+@keyframes esquerda {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes direita {
+  0% {
+    transform: translateX(50px); 
+    opacity: 0;
+  }
+}
+
+@keyframes cima {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+.s4 {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  min-height: 60vh;
+  flex-direction: column;
+}
+
+.video {
+  width: 560px;
+  height: 315px;
+  box-shadow: 0px 3px 15px #090909;
+  border-radius: 10px;
+}
+
+.s5{
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario{
+  background-color: #090909;
+  color: #ffff;
+  box-shadow: 0px 3px 10px #090909;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.formulario label {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.formulario input{
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  border-bottom: 2px solid #ffff;
+  width: 100%;
+}
+
+.formulario input:focus{
+  outline: none;
+  color: cornflowerblue;
+  border-bottom: 2px solid cornflowerblue;
+}
+ 
+textarea{
+  max-width: 250px;
+  min-width: 250px;
+  min-height: 150px;
+  max-height: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+button{
+  border: none;
+  border-radius: 5px;
+  border: 2px solid white;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  transition: all 200ms linear;
+  width: 100%;
+}
+
+button:hover{
+  background: white;
+  color: #090909;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+.card{
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 20px;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px #090909;
+  
+}
+
+.card img{
+   width: 100%;
+   height: 200px;       
+   object-fit: cover; 
+}
+
+.textCard{
+  padding: 20px;
+}
+
+.s3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 10px;
+  gap: 10px;
+  background-color: #090909;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer a img {
+  border-radius: 999px;
+  opacity: 0.7; 
+  transition: all 200ms ease-in-out;
+}
+
+footer a img:hover {
+  opacity: 1; 
+  cursor: pointer;
+  transform: scale(1.1) translate(-5px);
+}
+
+@media (width <= 800px) {
+  nav {
+    height: 80px;
+    gap: 5vw;
+  }
+
+  .navItem img {
+    width: 50px;
+  }
+
+  .navWords {
+    display: none;
+  }
+
+  .video {
+    width: 100%;
+    height: 315px;
+    border-radius: 0px;
+  }
+
+  .s1 {
+    background-image: url(./bgMoba.jpeg);
+  }
+}
+
