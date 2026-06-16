@@ -20,7 +20,7 @@ function App() {
   const enviar = () => {
     const mensagem = `Gostaria de entrar em contato! \n\nNome: ${nome} \naAssunto: ${assunto}`
     const msg = encodeURIComponent(mensagem)
-    window.open(`https://wa.me/5541999999999?text=${msg}`)
+    window.open(`https://wa.me/**********?text=${msg}`)
   }
 
 
